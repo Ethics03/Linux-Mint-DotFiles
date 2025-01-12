@@ -9,7 +9,7 @@ git clone https://github.com/Ethics03/Linut-Mint-Dotfiles.git
 
 # Dependencies ->
 
-`
+```
 bspwm
 nitrogen
 polybar
@@ -18,4 +18,4 @@ sxhkd
 synth-shell
 picom
 
-`
+```
