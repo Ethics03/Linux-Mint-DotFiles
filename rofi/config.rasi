@@ -12,6 +12,7 @@ configuration {
 	case-sensitive: false;
 	cycle: true;
 	filter: "";
+	fullscreen: false;
 	scroll-method: 0;
 	normalize-match: true;
 	show-icons: true;
