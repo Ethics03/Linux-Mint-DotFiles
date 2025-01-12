@@ -1,7 +1,7 @@
 * {
     bg0: #0f1e1e;
     bg1: #112121;
-    grey0: #2c314a;
+    grey0: #253939;
     fg0: #95d3d3;
 	font: "Noto Sans Bold 10";
 	display-drun:               " ";
@@ -39,6 +39,8 @@ message {
     padding: 10;
     background-color: @grey0;
 }
+
+
 
 listview {
     padding: 8;

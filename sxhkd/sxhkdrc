@@ -19,7 +19,6 @@ super + m
 super + shift + m
     bspc wm -r
 
-
 # toggle between floating and tiling
 super + v
     bspc node -t {floating,tiled}
