@@ -1,0 +1,35 @@
+# Open terminal
+super + t
+    gnome-terminal
+
+# program launcher
+super + r
+    rofi -show drun
+
+# Close window
+super + w
+    bspc node -c
+
+
+# quit/restart bspwm
+super + m
+    bspc quit
+
+# To restart BSPWM
+super + shift + m
+    bspc wm -r
+
+
+# toggle between floating and tiling
+super + v
+    bspc node -t {floating,tiled}
+
+# toggle fullscreen 
+super + f
+    bspc node -t {fullscreen,tiled}
+    
+
+# Switch desktops
+super + {1-9}
+    bspc desktop -f ^{1-9}
+
