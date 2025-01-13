@@ -1,0 +1,29 @@
+[global]
+frame_color = "#9adddd"
+separator_color = frame
+font = JetBrains Mono Nerd Font Bold 14
+origin = top-left
+offset = 10x37  # Correct format: XxY without parentheses
+width = 400     # Single number for width
+height = 500    # Single number for height
+progress_bar = true
+timeout = 5
+frame_width = 2
+
+progress_bar_height = 10
+progress_bar_frame_width = 1
+progress_bar_min_width = 150
+
+[urgency_low]
+background = "#223939"
+foreground = "#8ed7d7"
+
+[urgency_normal]
+background = "#223939"
+foreground = "#8ed7d7"
+
+[urgency_critical]
+background = "#223939"
+foreground = "#8ed7d7"
+frame_color = "#b577f0"
+
