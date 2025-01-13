@@ -1,15 +1,15 @@
 #! /bin/sh
 
-sxhkd &
 
-polybar example &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV 
 
 bspc config border_width         2
-bspc config window_gap          12
+bspc config window_gap           8
+bspc config focused_border_color "#22f5f5"
+bspc config normal_border_color "#1d1d39"
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -20,3 +20,20 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+
+#autostart
+
+sxhkd &
+
+polybar &
+
+dunst &
+
+nitrogen --set-scaled ~/Pictures/wallpapers/bspwm1.jpg &
+
+xclip &
+
+picom &
+
+xsetroot -cursor_name left_ptr &
