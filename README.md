@@ -13,6 +13,8 @@ git clone https://github.com/Ethics03/Linut-Mint-Dotfiles.git
 bspwm
 nitrogen
 polybar
+dunst
+alacritty
 rofi
 sxhkd
 synth-shell
