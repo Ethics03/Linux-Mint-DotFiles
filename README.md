@@ -14,10 +14,12 @@ bspwm
 nitrogen
 polybar
 dunst
-alacritty
+kitty
+fastfetch
 rofi
 sxhkd
 synth-shell
 picom
+neofetch
 
 ```
