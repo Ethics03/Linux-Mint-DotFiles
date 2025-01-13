@@ -4,7 +4,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV 
+bspc monitor -d 1 2 3 4 5 
 
 bspc config border_width         2
 bspc config window_gap           8
@@ -30,7 +30,7 @@ polybar &
 
 dunst &
 
-nitrogen --set-scaled ~/Pictures/wallpapers/bspwm1.jpg &
+nitrogen --set-scaled ~/Pictures/wallpapers/bspwm2.jpg &
 
 xclip &
 
