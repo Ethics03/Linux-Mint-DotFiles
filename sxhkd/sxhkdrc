@@ -1,6 +1,6 @@
 # Open terminal
 super + t
-    alacritty
+    kitty
 
 # program launcher
 super + r
@@ -53,7 +53,14 @@ super + v
 # toggle fullscreen 
 super + f
     bspc node -t {fullscreen,tiled}
-    
+   
+# Cycle through windows
+super + Tab
+    bspc node -f next.local
+super + Shift + Tab
+    bspc node -f prev.local
+
+
 # move/resize
 #
 
@@ -67,7 +74,7 @@ super + alt + {h,j,k,l}
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# move a floating window
+ move a floating window
 
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
@@ -76,6 +83,23 @@ super + {Left,Down,Up,Right}
 
 ctrl + shift + b
 	killall -9 polybar && polybar &
+
+
+# Volume control (pamixer)
+XF86AudioRaiseVolume
+    pamixer -i 5
+XF86AudioLowerVolume
+    pamixer -d 5
+XF86AudioMute
+    pamixer -t
+
+
+# Brightness control (brightnessctl)
+XF86MonBrightnessUp
+    brightnessctl set +10%
+sXF86MonBrightnessDown
+    brightnessctl set 10%-
+
 
 
 # Switch desktops
