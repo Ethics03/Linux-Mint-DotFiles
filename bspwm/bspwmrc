@@ -4,29 +4,46 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 2 3 4 5 
+bspc monitor eDP-1 -d 1 2 3 4 5
+bspc monitor HDMI-1-0 -d 6 7 8 9 10
+
+#APPEARANCE SETTINGS
 
 bspc config border_width         2
 bspc config window_gap           8
 bspc config focused_border_color "#22f5f5"
 bspc config normal_border_color "#1d1d39"
 
+
+#BEHAVIOR SETTINGS
+
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+
+
+#APPLICATION RULES 
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
+bspc rule -a Brave-browser desktop='^2' state=tiled follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a kitty state=tiled follow=off 
+bspc rule -a Discord desktop='^3' state=tiled follow=off
 
 
 #autostart
 
-sxhkd &
+killall -q polybar
+for monitor in $(bspc query -M --names); do
+    MONITOR=$monitor polybar example &
+done
 
-polybar &
+
+sxhkd &
 
 dunst &
 
@@ -36,4 +53,4 @@ xclip &
 
 picom &
 
-xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name left_ptr & 
