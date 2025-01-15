@@ -22,7 +22,7 @@ super + m
 super + shift + m
     bspc wm -r
 
-# Close window
+ Close window
 super + q
     bspc node -c
 
@@ -101,10 +101,10 @@ sXF86MonBrightnessDown
     brightnessctl set 10%-
 
 
-
 # Switch desktops
 super + {1-9}
     bspc desktop -f ^{1-9}
 
+#Take screenshot
 Print
 	scrot -s "Screenshot:%F_%H-%M-%S_$wx$h.png" -e 'mv $f ~/Pictures/Screenshots' && notify-send "Screenshot taken" "Screenshot succesfully taken"
