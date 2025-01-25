@@ -5,7 +5,8 @@ Clone this repo with this command:
 ```bash
 git clone https://github.com/Ethics03/Linut-Mint-Dotfiles.git
 ```
-
+-> Make sure u configure your picom as i3wm dosent have
+its own compositor
 
 # Dependencies ->
 
