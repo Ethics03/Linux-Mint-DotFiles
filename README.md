@@ -1,4 +1,4 @@
-# BSPWM Dotfiles
+# i3WM Dotfiles
 
 Clone this repo with this command:
 
